@@ -1,0 +1,25 @@
+.allcoll {
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.allcoll h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  padding: 20px;
+  background-color: #b56e17; 
+  color: white;
+  font-weight: bold;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}

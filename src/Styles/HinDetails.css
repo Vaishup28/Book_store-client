@@ -1,0 +1,108 @@
+.book-details-container {
+    padding: 20px;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .back-btn {
+    background: none;
+    border: none;
+    color: white;
+    background-color: #ec9735;
+    margin: 3px;
+    padding: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .book-details {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .book-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+  }
+  
+  .book-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .book-info {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .book-info h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #222;
+    font-family: 'Recoleta', serif;
+  }
+  
+  .book-info p {
+    margin: 6px;
+    font-size: 18px;
+    margin-right: 30vh;
+    margin-top: 3vh;
+    color: #444;
+  }
+  
+  .book-info del {
+    color: gray;
+    font-size: 16px;
+  }
+  
+  .price {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 10px;
+    color: black;
+  }
+  
+  .cart-btn,
+  .buy-btn {
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Recoleta', serif;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    border-radius: 4px;
+  }
+  
+  .cart-btn {
+    background-color: #f3f3f3;
+    color: #333;
+    border: 1px solid #ccc;
+    margin-top: 80px;
+    width: 50vh;
+    margin-left: 10vh;
+
+  }
+  
+  .buy-btn {
+    background-color: #ec9735;
+    width: 50vh;
+    color: white;
+    margin-top: 10px;
+    margin-left: 10vh;
+    
+  }
+  

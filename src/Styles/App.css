@@ -1,0 +1,264 @@
+/* Global Styling */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  text-align: center;
+  margin-top: 90px;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 800px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+   
+}
+
+/* Title */
+.title {
+  font-size: 28px;
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* Dropdown */
+.dropdown-container {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dropdown-container label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+select {
+  padding: 8px;
+  font-size: 16px;
+  border: 2px solid #494848;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+}
+
+
+.loading {
+  color: #e67e22;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.error {
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+
+.book-card {
+  width: 300px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-left: 5px solid #ec9735 ;
+  transition: transform 0.2s ease-in-out;
+  overflow: hidden;
+  margin-bottom: 120px;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+/* Restaurant Image */
+.book-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Restaurant Details */
+.book-details {
+  padding: 10px;
+}
+
+.book-details h2 {
+  color: #333;
+  font-size: 20px;
+  margin: 10px 0 5px;
+}
+
+.book-details p {
+  font-size: 16px;
+  color: #777;
+  margin: 0;
+}
+
+/* No Data */
+.no-data {
+  font-size: 18px;
+  color: #555;
+  margin-top: 10px;
+}
+
+
+.book-detail-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+   margin-top: 90px;
+}
+
+.book-title {
+  font-size: 26px;
+  color: #e79d3c;
+  font-weight: bold;
+}
+
+.book-detail-image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.book-city {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
+.book-description {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Back Button */
+.back-button {
+  background: #e67e22;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.back-button:hover {
+  background: #e67e22;
+}
+
+/* Ratings */
+.average-rating {
+  font-size: 22px;
+  font-weight: bold;
+  color: #e67e22;
+}
+
+/* Reviews Section */
+.reviews-section {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.reviews-section h2 {
+  color: #333;
+  font-size: 22px;
+  border-bottom: 2px solid #e67e22;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+.review-card {
+  background: #f8f8f8;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border-left: 5px solid #e67e22;
+}
+
+.review-user {
+  font-size: 16px;
+  color: #333;
+}
+
+.review-comment {
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+}
+
+/* Add Review Section */
+.add-review-section {
+  margin-top: 20px;
+}
+
+.add-review-section h2 {
+  font-size: 22px;
+  color: #333;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #e67e22;
+  border-radius: 5px;
+}
+
+.review-form textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.submit-button {
+  background: #d86a0a;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.submit-button:hover {
+  background: #e67e22;
+}
+

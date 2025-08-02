@@ -1,0 +1,70 @@
+/* Book.css */
+
+.allbook {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.allbook h2 {
+  text-align: center;
+  color: #333;
+  width: 114vh;
+  background-color: #e28111;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.css-id {
+  text-align: center;
+  list-style-type: none;
+  color: #333;
+  margin-bottom: 2vh;
+  font-size: 3vh;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 2vh;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.css-id:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.01);
+}
+
+.css-id strong a {
+  color: #e28111;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.css-id strong a:hover {
+  text-decoration: underline;
+}
+
+.css-id p {
+  margin-top: 0.5rem;
+}
+
+.css-id p a {
+  color: #555;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.css-id p a:hover {
+  text-decoration: underline;
+  color: #333;
+}
+
+/* Loading and error messages */
+.allbook p {
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+}

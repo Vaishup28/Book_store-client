@@ -1,0 +1,107 @@
+/* Mystery.css */
+.mystery-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.book-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 20px;
+}
+
+.book-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  width: 150vh;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+  height: 100vh;
+
+}
+
+.book-item:hover {
+  transform: translateY(-5px);
+}
+
+.book-item img {
+  width: 50vh;
+  height:80vh;
+  border-radius: 2px;
+  margin-right: 500px;
+  margin-top: 80px;
+}
+
+.book-item strong {
+  display: block;
+  margin-top: -80vh;
+  margin-left: 65vh;
+  margin-bottom: 5vh;
+  font-family: recoleta, serif;
+  font-size: 30px;
+  color: black;
+}
+
+ .ori-price{
+  text-decoration: line-through;
+  color: gray;
+  font-size: 18px;
+  margin-left: 90px;
+  font-family: recoleta, serif;
+
+}
+
+.dis-price{
+  font-weight: bold;
+  color: black;
+  font-size: 23px;
+  margin-left: 10px;
+  font-family: recoleta, serif;
+}
+
+.add-cart{
+  position: absolute;
+  color: black;
+  background-color: white;
+  font-family: recoleta, serif;
+  border-style:groove;
+  font-size: 22px;
+  width: 50vh;
+  padding: 2px;
+  margin-top: 10vh;
+  margin-left: 50vh;
+  cursor: pointer;
+}
+
+.buy{
+  background-color: #ec9735;
+  color: white;
+  font-family: recoleta, serif;
+  border-color:#333;
+  font-size: 22px;
+  margin-top: 18vh;
+  margin-left: 50vh;
+  padding: 2px;
+  width: 50vh;
+  cursor: pointer;
+}
+.stock-left{
+    color: black;
+    font-size: 20px;
+    font-family: recoleta, serif;
+     margin-bottom: 90vh;
+}
+.stock-left p{
+    margin-left: 69vh;
+    margin-top: 2vh;
+    text-align: left;
+}

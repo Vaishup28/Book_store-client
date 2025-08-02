@@ -1,0 +1,118 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #bedcf0;
+    opacity: 0.8;
+    color: white;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+  }
+  
+  .logo a {
+    color: black;
+    font-size: 35px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 8px;
+  }
+
+  .search-box {
+  margin-left: 50vh;
+  }
+
+  .search-box input {
+    width: 400px;
+    height: 20px;
+    padding: 5px;
+    border-radius: 13px;
+    border: none;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links .username {
+    margin-right: 15px;
+  }
+  
+  .nav-button {
+    background: white;
+    color: #ec9735;
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: 0.3s;
+  }
+  .opt{
+    background-color: transparent;
+  }
+  .opt-1{
+    
+    color: black;
+    text-decoration: none;
+    font-size:large;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-left: 20px; 
+  }
+  
+  
+.opt-2{
+
+    color: black;
+    text-decoration: none;
+    font-size:large;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-left:20px ;
+}
+.opt-3{
+  
+    color: black;
+    text-decoration: none;
+    font-size:large;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-left: 20px; 
+}
+
+.nav-cart{
+  background-color: transparent;
+  text-decoration: none;
+  font-size: large;
+  color: black;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  margin-left: 20px;
+}
+  
+  .nav-button:hover {
+    background: white;
+    color: #ec9735;
+  }
+  
+  .signup {
+    background: white;
+    color: #ec9735;
+    margin-right: 8px;
+  }
+  
+  .signup:hover {
+    background: transparent;
+    color: white;
+  }
+  
+  .logout-btn {
+    background: white;
+    color: #ec9735;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
