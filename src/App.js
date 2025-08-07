@@ -41,7 +41,7 @@ const App = () => {
         <Route path="/signup" element={<Signup />} />    
         {/* <Route path="/book/cityResponse/:city" element={<Results/>}/>
         <Route path="/book/bookType/:booktype" element={<Results/>}/> */}
-        <Route path="/Mys/:_id" element={<Mystery />} />
+        <Route path="/Mys/:id" element={<Mystery />} />
         <Route path="/coll" element={<HindiColl/>}/>
         <Route path="/bundleColl" element={<Bundle/>}/>
         <Route path="/bundleColl/:_id" element={<BundleDetails/>}/>

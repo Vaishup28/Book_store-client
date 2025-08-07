@@ -44,53 +44,16 @@ const BookDetails = () => {
     : "No Ratings Yet";
 
   return (
-    <div className="book-detail-container">
-      <button onClick={() => navigate(-1)} className="back-button">⬅ Go Back</button>
-      <h1 className="book-title">{book.book}</h1>
-      <img src={book.image || "/default-book.jpg"} alt={book.book} className="book-detail-image" />
-      <p className="book-city">📍 Location: {book.city}</p>
-      <p className="book-description">A digital platform where customers can browse, search, and purchase books (physical or digital) over the internet.</p>
-      <p className="average-rating">⭐ {averageRating} / 5</p>
-      
-      <div className="reviews-section">
-        <h2>Customer Reviews</h2>
-        {book.reviews?.length > 0 ? (
-          book.reviews.map((review, index) => (
-            <div key={index} className="review-card">
-              <p className="review-user"><strong>{review.username}</strong> ⭐ {review.rating}/5</p>
-              <p className="review-comment">"{review.comment}"</p>
-            </div>
-          ))
-        ) : (
-          <p>No reviews yet.</p>
-        )}
-      </div>
-      
-      <div className="add-review-section">
-        <h2>Add a Review</h2>
-        <form onSubmit={handleReviewSubmit} className="review-form">
-          <input
-            type="text"
-            placeholder="Your Name"
-            value={newReview.username}
-            onChange={(e) => setNewReview({ ...newReview, username: e.target.value })}
-            required
-          />
-          <select value={newReview.rating} onChange={(e) => setNewReview({ ...newReview, rating: parseInt(e.target.value) })}>
-            {[5, 4, 3, 2, 1].map((rating) => (
-              <option key={rating} value={rating}>{rating} Stars</option>
-            ))}
-          </select>
-          <textarea
-            placeholder="Write a review..."
-            value={newReview.comment}
-            onChange={(e) => setNewReview({ ...newReview, comment: e.target.value })}
-            required
-          />
-          <button type="submit" className="submit-button">Submit Review</button>
-        </form>
-      </div>
+   <div className="book-info">
+      <h2>{book.name}</h2>
+      <p><del>Rs. 399</del> <span className="price">Rs. {book.price}</span></p>
+      <p>Only 1 left in stock</p>
+      <p>Binding: Paperback</p>
+      <p>Condition: Gently Used</p>
+      {/* <button className="cart-btn" onClick={handleAddToCart}>Add to cart</button> */}
+          <button className="buy-btn">Buy now</button>
     </div>
+    
   );
 };
 

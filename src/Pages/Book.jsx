@@ -1,54 +1,25 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import { Link } from "react-router-dom";
 import '../Styles/Book.css';
 
-
-
 const Book = () => {
-  const [book, setBook] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    axios
-      .get("http://localhost:8080/book")
-      .then((response) => {
-        console.log("API Response:", response.data); 
-        if (Array.isArray(response.data)) {
-          setBook(response.data);
-        } else {
-          console.error("Unexpected API response:", response.data);
-          setBook([]); 
-        }
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-        setError(error.message);
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
-
+  
   return (
     <div className="allbook">
-      <h2>Books</h2>
-           {Array.isArray(book) && book.length > 0 ? (
-             book.map((book) => (
-               <li key={book._id} className="css-id">
-                <strong>
-                <a href={`/book/${book._id}`}>{book.book}</a>
-                </strong> - {book.city}
-              <p>
-                See more books
-              </p>
-              </li>
-              ))
-        ) : (
-          <p>No books available.</p>
-        )}
+      
+        <div className="featured-list1">
+          <div className="featured-item1">
+           <Link to ="/coll"><img src="https://kitabay.com/cdn/shop/files/Copy_of_Decorate_your_home_with_Coffee_Table_Books.jpg?v=1727267160" alt="Book-1" /></Link> 
+            
+          </div>
+          <div className="featured-item1">
+            <Link to ="/bundleColl"><img src="https://kitabay.com/cdn/shop/files/Copy_of_Decorate_your_home_with_Coffee_Table_Books_1.jpg?v=1727267160" alt="Book-2" /></Link>
+        
+          </div>
+          <div className="featured-item1">
+          <Link to ="/kidsColl"><img src="https://kitabay.com/cdn/shop/files/Copy_of_Decorate_your_home_with_Coffee_Table_Books_5.jpg?v=1738931005" alt="Book-3" /></Link>
+          
+          </div>
+        </div>
       
       </div>
 

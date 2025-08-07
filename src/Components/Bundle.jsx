@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom"; 
 import '../Styles/Bundle.css';
 
 const Bundle = () => {
@@ -35,10 +36,14 @@ const Bundle = () => {
         {bundleColl.length > 0 ? (
           bundleColl.map((book) => (
             <li key={book._id} className="css-coll">
-              <img src={book.image} alt={book.name} />
+              <Link to={`/bundleColl/${book._id}`}>
+                <img src={book.image} alt={book.name} />
+              </Link>
+
               <strong>
-                <a href={`/bundleColl/${book._id}`}>{book.name}</a>
+                <Link to={`/bundleColl/${book._id}`}>{book.name}</Link>
               </strong>
+
               <p className="price">Rs. {book.price}</p>
               <span className="original">Rs. 1999</span>
               <button className="add-to-cart">Add to cart</button>

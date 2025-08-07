@@ -4,16 +4,16 @@ import axios from "axios";
 import '../Styles/Mystery.css';
 
 const Mystery = () => {
-  const { _id } = useParams();
+  const { id } = useParams(); // ✅ FIXED
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/Mys/${_id}`)
+      .get(`http://localhost:8080/Mys/${id}`) // ✅ FIXED
       .then((response) => {
-        const result = response.data?.Mys;
+        const result = response.data;
         if (result) {
           setBooks([result]);
         } else {
@@ -25,35 +25,30 @@ const Mystery = () => {
         setError(error.message);
         setLoading(false);
       });
-  }, [_id]);
+  }, [id]); 
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
   return (
     <div className="mystery-container">
-      
       {books.length > 0 ? (
         <ul className="book-list">
           {books.map((book) => (
-            <li className="book-item" key={book._id}>
+            <li className="book-item" key={book.id}>
               <img src={book.image} alt={book.name} />
               <strong>{book.name}</strong>
-             <p>
-            <span className="ori-price">Rs. 499</span>
-            <span className="dis-price">Rs. 299</span>
-          </p>
-          <span className="stock-left">
-           <p> Only 1 left in stock</p>
-           <p> Binding: Paperback</p>
-           <p> Condition: Gently Used</p>
-            
-          </span>
-          
-          <span className="add-cart"> Add to cart </span>
-
-          <button className="buy"> Buy now </button>
-        
+              <p>
+                <span className="ori-price">Rs. 499</span>
+                <span className="dis-price">Rs. 299</span>
+              </p>
+              <span className="stock-left">
+                <p>Only 1 left in stock</p>
+                <p>Binding: Paperback</p>
+                <p>Condition: Gently Used</p>
+              </span>
+              <span className="add-cart">Add to cart</span>
+              <button className="buy">Buy now</button>
             </li>
           ))}
         </ul>

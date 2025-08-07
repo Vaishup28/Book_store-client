@@ -12,7 +12,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
+  box-shadow: none;
+  background-color: transparent;
   gap: 20px;
 }
 

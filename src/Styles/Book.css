@@ -1,8 +1,6 @@
-/* Book.css */
-
 .allbook {
   padding: 2rem;
-  max-width: 800px;
+  max-width: 10px;
   margin: 0 auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f9f9f9;
@@ -10,61 +8,37 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.allbook h2 {
+.featured-list1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: white;
+  box-shadow: none;
+}
+
+.featured-item1 {
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   text-align: center;
-  color: #333;
-  width: 114vh;
-  background-color: #e28111;
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.css-id {
-  text-align: center;
-  list-style-type: none;
-  color: #333;
-  margin-bottom: 2vh;
-  font-size: 3vh;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 2vh;
-  transition: background-color 0.3s, transform 0.2s;
+.featured-item1:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.css-id:hover {
-  background-color: #f1f1f1;
-  transform: scale(1.01);
+.featured-item1 img {
+  width: 280px;
+  height: 350px;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
-.css-id strong a {
-  color: #e28111;
-  text-decoration: none;
-  font-size: 1.1rem;
+.featured-item1 p {
+  margin-top: 10px;
+  font-weight: bold;
 }
 
-.css-id strong a:hover {
-  text-decoration: underline;
-}
-
-.css-id p {
-  margin-top: 0.5rem;
-}
-
-.css-id p a {
-  color: #555;
-  text-decoration: none;
-  font-size: 0.95rem;
-}
-
-.css-id p a:hover {
-  text-decoration: underline;
-  color: #333;
-}
-
-/* Loading and error messages */
-.allbook p {
-  text-align: center;
-  color: #666;
-  font-size: 1rem;
-}

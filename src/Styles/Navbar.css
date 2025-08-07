@@ -1,118 +1,130 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #bedcf0;
-    opacity: 0.8;
-    color: white;
-    height: 60px;
-    width: 100%;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-  }
-  
-  .logo a {
-    color: black;
-    font-size: 35px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-left: 8px;
-  }
-
-  .search-box {
-  margin-left: 50vh;
-  }
-
-  .search-box input {
-    width: 400px;
-    height: 20px;
-    padding: 5px;
-    border-radius: 13px;
-    border: none;
-  }
-  
-  .nav-links {
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-links .username {
-    margin-right: 15px;
-  }
-  
-  .nav-button {
-    background: white;
-    color: #ec9735;
-    text-decoration: none;
-    padding: 8px 15px;
-    border: 1px solid white;
-    border-radius: 5px;
-    margin-left: 10px;
-    transition: 0.3s;
-  }
-  .opt{
-    background-color: transparent;
-  }
-  .opt-1{
-    
-    color: black;
-    text-decoration: none;
-    font-size:large;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    margin-left: 20px; 
-  }
-  
-  
-.opt-2{
-
-    color: black;
-    text-decoration: none;
-    font-size:large;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    margin-left:20px ;
-}
-.opt-3{
-  
-    color: black;
-    text-decoration: none;
-    font-size:large;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    margin-left: 20px; 
+  background: #fff;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  font-family: "Segoe UI", sans-serif;
 }
 
-.nav-cart{
-  background-color: transparent;
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 600;
+  color: #333;
   text-decoration: none;
-  font-size: large;
-  color: black;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  margin-left: 20px;
+  margin-right: 40px;
 }
-  
-  .nav-button:hover {
-    background: white;
-    color: #ec9735;
-  }
-  
-  .signup {
-    background: white;
-    color: #ec9735;
-    margin-right: 8px;
-  }
-  
-  .signup:hover {
-    background: transparent;
-    color: white;
-  }
-  
-  .logout-btn {
-    background: white;
-    color: #ec9735;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-link {
+  font-size: 17px;
+  color: #111;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #faab83;
+}
+
+/* Search box */
+.search-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin: 0 40px;
+}
+
+.search-box input {
+  width: 420px;
+  padding: 10px 45px 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 14px;
+  outline: none;
+  background: #fafafa url("https://cdn-icons-png.flaticon.com/512/622/622669.png") no-repeat 380px center;
+  background-size: 16px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.logout-btn {
+  background-color: #f7d0bc;
+  border: none;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #f7d0bc;
+}
+
+.nav-button {
+  background: #f7d0bc;
+  border: 1px solid #f7d0bc;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color:#f7d0bc;
+  color: black;
+}
+
+.signup {
+  background-color:#f7d0bc;
+  color: black;
+  border: none;
+}
+
+.signup:hover {
+  background-color: #f7d0bc;
+}
+
+/* Cart Icon */
+.nav-cart {
+  position: relative;
+  font-size: 20px;
+  color: #f1c0a7;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background-color:#f7d0bc;
+  color:#f8ba9c;
+  border-radius: 50%;
+  font-size: 10px;
+  padding: 2px 6px;
+  font-weight: bold;
+}
