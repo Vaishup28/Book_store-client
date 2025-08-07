@@ -11,6 +11,7 @@ function Results() {
   const [books, setBooks] = useState([]);      
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false); 
+  const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
   useEffect(() => {
     const fetchBook = async () => {
@@ -20,10 +21,10 @@ function Results() {
       try {
         let url = "";
 
-        if (city) {
-          url = `http://localhost:8080/cityResponse/${city}`;
+        if (city) { 
+          url = `${BASE_URL}/cityResponse/${city}`;
         } else if (booktype) {
-          url = `http://localhost:8080/bookType/${booktype}`;
+          url = `${BASE_URL}/bookType/${booktype}`;
         } else {
           setBooks([]);
           setLoading(false);

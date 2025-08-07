@@ -7,9 +7,11 @@ const Bundle = () => {
   const [bundleColl, setBundle] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 
   useEffect(() => {
-    axios.get("http://localhost:8080/bundleColl")
+    axios.get(`${BASE_URL}/bundleColl`)
       .then((response) => {
         console.log("API Response:", response.data);
         if (Array.isArray(response.data)) {

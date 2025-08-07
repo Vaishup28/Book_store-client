@@ -8,10 +8,12 @@ const Mystery = () => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/Mys/${id}`) // ✅ FIXED
+      .get(`${BASE_URL}/Mys/${id}`) 
       .then((response) => {
         const result = response.data;
         if (result) {

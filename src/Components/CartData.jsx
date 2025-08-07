@@ -7,6 +7,8 @@ import axios from "axios";
 const CartData = () => {
   const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } = useCart();
   const { user } = useAuth(); 
+  const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 
 
   const getTotal = () => {
@@ -31,7 +33,7 @@ const CartData = () => {
 
       console.log("Saving cart to DB with payload:", payload);
 
-      const res = await axios.post("http://localhost:8080/api/cart/save", payload);
+      const res = await axios.post(`${BASE_URL}/api/cart/save`, payload);
       console.log(res.data);
       alert("Cart saved successfully!");
     } catch (err) {

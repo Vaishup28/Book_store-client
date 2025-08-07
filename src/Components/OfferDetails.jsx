@@ -10,10 +10,12 @@ const OfferDetails = () => {
   const [book, setBook] = useState(null);
   const [loading, setLoading] = useState(true);
   const { addToCart } = useCart();
+  const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/off/${_id}`)
+      .get(`${BASE_URL}/off/${_id}`)
       .then((res) => {
         setBook(res.data);
         setLoading(false);

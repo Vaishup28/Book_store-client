@@ -7,9 +7,11 @@ const Monsoon = () => {
   const [monColl, setMonsoon] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 
   useEffect(() => {
-    axios.get("http://localhost:8080/monColl")
+    axios.get(`${BASE_URL}/monColl`)
       .then((response) => {
         if (Array.isArray(response.data)) {
           setMonsoon(response.data);

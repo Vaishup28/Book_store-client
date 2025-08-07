@@ -7,9 +7,11 @@ const HindiColl = () => {
   const [coll, setHindiColl] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 
   useEffect(() => {
-    axios.get("http://localhost:8080/coll")
+    axios.get(`${BASE_URL}/coll`)
       .then((response) => {
         if (Array.isArray(response.data)) {
           setHindiColl(response.data);

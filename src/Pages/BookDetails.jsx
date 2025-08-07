@@ -10,12 +10,13 @@ const BookDetails = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [newReview, setNewReview] = useState({ username: "", rating: 5, comment: "" });
+  const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
   useEffect(() => {
      console.log("Fetching book with ID:", _id);
     axios
     
-      .get(`http://localhost:8080/book/${_id}`)
+      .get(`${BASE_URL}/book/${_id}`)
       
       .then((response) => {
         setBook(response.data.book); 

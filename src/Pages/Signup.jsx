@@ -8,6 +8,7 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
   const navigate = useNavigate();
 
@@ -16,7 +17,7 @@ const Signup = () => {
     setError("");
 
     try {
-      const res = await axios.post("http://localhost:8080/api/signup", {
+      const res = await axios.post(`${BASE_URL}/api/signup`, {
         name,
         email,
         password,

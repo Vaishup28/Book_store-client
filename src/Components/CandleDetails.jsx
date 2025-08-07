@@ -11,9 +11,11 @@ const CandleDetails = () => {
   const [book, setBook] = useState(null);
   const [loading, setLoading] = useState(true);
   const { addToCart } = useCart();
+  const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/candleColl/${_id}`)
+    axios.get(`${BASE_URL}/candleColl/${_id}`)
       .then((res) => {
         setBook(res.data);
         setLoading(false);
