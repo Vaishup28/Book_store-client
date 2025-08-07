@@ -15,6 +15,7 @@ const HinDetails = () => {
   useEffect(() => {
     axios.get(`${BASE_URL}/coll/${_id}`)
       .then((res) => {
+
         setBook(res.data);
         setLoading(false);
       }) 
@@ -22,7 +23,7 @@ const HinDetails = () => {
         setBook(null);
         setLoading(false);
       });
-  }, [_id]);
+  }, [_id, BASE_URL]);
 
   if (loading) return <p>Loading...</p>;
   if (!book) return <p>Book not found</p>;
