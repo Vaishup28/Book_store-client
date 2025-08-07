@@ -22,7 +22,7 @@ const BundleDetails = () => {
         setBook(null);
         setLoading(false);
       });
-  }, [_id]);
+  }, [_id,BASE_URL]);
 
   if (loading) return <p>Loading...</p>;
   if (!book) return <p>Book not found</p>;

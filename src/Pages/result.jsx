@@ -43,7 +43,7 @@ function Results() {
     };
 
     fetchBook();
-  }, [city, booktype]);
+  }, [city, booktype,BASE_URL]);
 
   return (
     <div>

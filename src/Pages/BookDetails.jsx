@@ -26,7 +26,7 @@ const BookDetails = () => {
         setError("Failed to fetch book details.");
         setLoading(false);
       });
-  }, [_id]);
+  }, [_id,BASE_URL]);
 
   const handleReviewSubmit = (e) => {
     e.preventDefault();

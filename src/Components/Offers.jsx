@@ -24,7 +24,7 @@ const Offers = () => {
         setError(error.message);
         setLoading(false);
       });
-  }, []);
+  }, [BASE_URL]);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
