@@ -1,108 +1,99 @@
 /* Mystery.css */
 .mystery-container {
   padding: 20px;
+  background-color: #f5e3d9;
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  min-height: 100vh;
+  min-height: 90vh;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.book-list {
-  list-style: none;
-  padding: 0;
+.book-details {
   display: flex;
-  flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: center;
-  box-shadow: none;
-  background-color: transparent;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-.book-item {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 15px;
-  width: 150vh;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease-in-out;
-  height: 100vh;
-
+.book-image {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
 }
 
-.book-item:hover {
-  transform: translateY(-5px);
+.book-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.book-item img {
-  width: 50vh;
-  height:80vh;
-  border-radius: 2px;
-  margin-right: 500px;
-  margin-top: 80px;
+.book-info {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
 }
 
-.book-item strong {
-  display: block;
-  margin-top: -80vh;
-  margin-left: 65vh;
-  margin-bottom: 5vh;
-  font-family: recoleta, serif;
-  font-size: 30px;
-  color: black;
+.book-info h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  font-family: 'Recoleta', serif;
+  color: #222;
 }
 
- .ori-price{
+.book-info p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-family: 'Recoleta', serif;
+  color: #333;
+}
+
+.book-info .ori-price {
   text-decoration: line-through;
   color: gray;
   font-size: 18px;
-  margin-left: 90px;
-  font-family: recoleta, serif;
-
+  margin-right: 10px;
 }
 
-.dis-price{
+.book-info .dis-price {
   font-weight: bold;
-  color: black;
-  font-size: 23px;
-  margin-left: 10px;
-  font-family: recoleta, serif;
-}
-
-.add-cart{
-  position: absolute;
-  color: black;
-  background-color: white;
-  font-family: recoleta, serif;
-  border-style:groove;
+  color: #000;
   font-size: 22px;
-  width: 50vh;
-  padding: 2px;
-  margin-top: 10vh;
-  margin-left: 50vh;
-  cursor: pointer;
 }
 
-.buy{
+.stock-left {
+  margin-top: 10px;
+}
+
+.stock-left p {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.cart-btn,
+.buy-btn {
+  padding: 10px;
+  font-size: 18px;
+  font-family: 'Recoleta', serif;
+  border: none;
+  cursor: pointer;
+  width: 180px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.cart-btn {
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+}
+
+.buy-btn {
   background-color: #ec9735;
   color: white;
-  font-family: recoleta, serif;
-  border-color:#333;
-  font-size: 22px;
-  margin-top: 18vh;
-  margin-left: 50vh;
-  padding: 2px;
-  width: 50vh;
-  cursor: pointer;
-}
-.stock-left{
-    color: black;
-    font-size: 20px;
-    font-family: recoleta, serif;
-     margin-bottom: 90vh;
-}
-.stock-left p{
-    margin-left: 69vh;
-    margin-top: 2vh;
-    text-align: left;
+  margin-top: 10px;
 }
