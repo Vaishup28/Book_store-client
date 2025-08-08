@@ -10,7 +10,7 @@ const KidsDetails = () => {
   const [book, setBook] = useState(null);
   const [loading, setLoading] = useState(true);
   const { addToCart } = useCart();
-  const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+  const BASE_URL = "https://book-server-093o.onrender.com";
 
   useEffect(() => {
     axios.get(`${BASE_URL}/kidsColl/${_id}`)

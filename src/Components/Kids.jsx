@@ -7,7 +7,7 @@ const Kids = () => {
   const [kidsColl, setKids] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+  const BASE_URL = "https://book-server-093o.onrender.com";
 
 
   useEffect(() => {

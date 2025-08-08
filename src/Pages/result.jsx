@@ -6,12 +6,12 @@ function Results() {
  const { city, booktype } = useParams();
 
 
-  console.log("city, booktype -->>>", city, booktype);
+  console.log("city, booktype", city, booktype);
 
   const [books, setBooks] = useState([]);      
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false); 
-  const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+  const BASE_URL = "https://book-server-093o.onrender.com";
 
   useEffect(() => {
     const fetchBook = async () => {
