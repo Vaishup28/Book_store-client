@@ -38,6 +38,7 @@ const Mystery = () => {
     };
     addToCart(itemToAdd);
     setShowAlert("Book added to cart!");
+    setTimeout(() => setShowAlert(false), 3000);
   };
 
   if (loading) return <p>Loading...</p>;

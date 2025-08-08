@@ -39,6 +39,7 @@ const MonsoonDetails = () => {
   
     addToCart(itemToAdd);
     setShowAlert("Book added to cart!");
+    setTimeout(() => setShowAlert(false), 3000);
   };
   return (
     <div className="book-details-container">

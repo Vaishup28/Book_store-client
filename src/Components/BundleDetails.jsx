@@ -35,6 +35,7 @@ const BundleDetails = () => {
 
     addToCart(itemToAdd);
     setShowAlert(true);
+    setTimeout(() => setShowAlert(false), 3000);
   };
 
   if (loading) return <p>Loading...</p>;
