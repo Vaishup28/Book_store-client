@@ -10,6 +10,7 @@ const OfferDetails = () => {
   const [book, setBook] = useState(null);
   const [loading, setLoading] = useState(true);
   const { addToCart } = useCart();
+  const [showAlert, setShowAlert] = useState(false);
   const BASE_URL = "https://book-server-093o.onrender.com";
 
 
@@ -38,11 +39,12 @@ const OfferDetails = () => {
     };
   
     addToCart(itemToAdd);
-    alert("Book added to cart!");
+    setShowAlert("Book added to cart!");
   };
   return (
     <div className="book-details-container">
       <button className="back-btn" onClick={() => navigate(-1)}>← Back</button>
+       {showAlert && <div className="custom-alert">Book added to cart!</div>}
       <div className="book-details">
         <div className="book-image">
           <img src={book.image} alt={book.name || "Book Cover"} />

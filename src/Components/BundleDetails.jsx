@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import "../Styles/HinDetails.css"; 
+import "../Styles/HinDetails.css";
 import { useCart } from "../Context/CartContext";
 
 const BundleDetails = () => {
@@ -10,6 +10,7 @@ const BundleDetails = () => {
   const [book, setBook] = useState(null);
   const [loading, setLoading] = useState(true);
   const { addToCart } = useCart();
+  const [showAlert, setShowAlert] = useState(false);
   const BASE_URL = "https://book-server-093o.onrender.com";
 
   useEffect(() => {
@@ -22,25 +23,27 @@ const BundleDetails = () => {
         setBook(null);
         setLoading(false);
       });
-  }, [_id,BASE_URL]);
+  }, [_id, BASE_URL]);
 
-  if (loading) return <p>Loading...</p>;
-  if (!book) return <p>Book not found</p>;
- 
   const handleAddToCart = () => {
     const itemToAdd = {
-      id: book._id || book._id,
+      id: book._id,
       name: book.name,
       price: parseFloat(book.price),
       image: book.image,
     };
-  
+
     addToCart(itemToAdd);
-    alert("Book added to cart!");
+    setShowAlert(true);
   };
+
+  if (loading) return <p>Loading...</p>;
+  if (!book) return <p>Book not found</p>;
+
   return (
     <div className="book-details-container">
       <button className="back-btn" onClick={() => navigate(-1)}>← Back</button>
+      {showAlert && <div className="custom-alert">Book added to cart!</div>}
       <div className="book-details">
         <div className="book-image">
           <img src={book.image} alt={book.name || "Book Cover"} />

@@ -11,6 +11,7 @@ const Mystery = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { addToCart } = useCart();
+  const [showAlert, setShowAlert] = useState(false);
   const BASE_URL = "https://book-server-093o.onrender.com";
 
   useEffect(() => {
@@ -18,7 +19,7 @@ const Mystery = () => {
       .get(`${BASE_URL}/Mys/${_id}`)
       .then((response) => {
         console.log("Fetched book data:", response.data);
-        setBook(response.data.Mys);  // ✅ FIXED: access nested book data
+        setBook(response.data.Mys);  
         setLoading(false);
       })
       .catch((err) => {
@@ -36,7 +37,7 @@ const Mystery = () => {
       image: book.image,
     };
     addToCart(itemToAdd);
-    alert("Book added to cart!");
+    setShowAlert("Book added to cart!");
   };
 
   if (loading) return <p>Loading...</p>;
@@ -46,6 +47,7 @@ const Mystery = () => {
   return (
     <div className="mystery-container">
       <button className="back-btn" onClick={() => navigate(-1)}>← Back</button>
+       {showAlert && <div className="custom-alert">Book added to cart!</div>}
       <div className="book-details">
         <div className="book-image">
           <img src={book.image} alt={book.name} />
